@@ -5,7 +5,7 @@ import { authAPI } from '../api';
 // import { errorToast } from '../utils/toastify';
 
 const instance = axios.create({
-  baseURL: process.env.VITE_SERVER_URL,
+  baseURL: 'https://uandme.onrender.com',
   withCredentials: true
 });
 
