@@ -7,7 +7,7 @@ import { useSocketContext } from '../../context/SocketContext';
 import { useAxios } from '../../hooks/useAxios';
 import { socketEmitEvent } from '../../socket/emit';
 
-import { TextField, IconButton, Stack ,Skeleton } from '@mui/material';
+import { TextField, IconButton, Stack ,Skeleton, Box } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 
 export default function MessageInput({ setChatMessages }) {
@@ -101,7 +101,7 @@ export default function MessageInput({ setChatMessages }) {
   
 
   return (
-    <>
+    <Box sx={{position:"absolute", width:"100%", bottom:"5px"}}>
       {showNotify && (
         <>
             <Skeleton variant="rounded" sx={{ fontSize: '14px', px:"20px", display:"flex", alignItems:"center", fontFamily:"sans-serif", fontStyle:"italic",borderRadius:"20px", position:"absolute", bottom:"65px", left:0, right:0, marginLeft:"auto", marginRight:"auto"}} height={25}>{typingNotify.message}</Skeleton>
@@ -133,7 +133,7 @@ export default function MessageInput({ setChatMessages }) {
         </Stack>
         </>
       ) : null}
-    </>
+    </Box>
   )
 }
 

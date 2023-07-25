@@ -17,7 +17,7 @@ export default function ChatHeader() {
     <>
     <ImageDialogBox img={img} setImg={setImg}/>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             size="large"
@@ -41,32 +41,6 @@ export default function ChatHeader() {
                     chatInfo?.isOnline?<Typography sx={{fontSize:"12px", color:"#62c162", ml:0.5}}>• Online</Typography>:""
                 }
             </Stack>
-          <Stack direction="row" spacing={0.25}>
-            <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-            >
-                <VideocamIcon />
-            </IconButton>
-            <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-            >
-                <PhoneIcon />
-            </IconButton>
-            <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-            >
-                <MoreVertIcon />
-            </IconButton>
-          </Stack>
         </Toolbar>
       </AppBar>
     </Box>
