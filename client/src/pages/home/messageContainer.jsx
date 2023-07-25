@@ -21,7 +21,7 @@ export default function MessageContainer({ chatMessages, messageLoading }) {
   
     return (
       <>
-      <Box sx={{width: "100%", bgcolor: "background.paper", px:1, maxHeight:"calc(100vh - 70px)", overflow:"scroll", overflowX:"hidden", display:"flex", flexDirection:"column"}}>
+      <Box sx={{width: "100%", bgcolor: "background.paper", px:1, maxHeight:"calc(100vh - 170px)", overflow:"scroll", overflowX:"hidden", display:"flex", flexDirection:"column"}}>
         {messageLoading ? (
           <Box sx={{display:"flex", height:"calc(100vh - 125px)", justifyContent:"center", alignItems:"center"}}><CircularProgress color="success" /></Box>
           ) : chatMessages.length === 0  ? (
